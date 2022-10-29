@@ -80,7 +80,7 @@ class Spot:
             self.neighbours.append(grid[self.row - 1][self.col])
 
         if self.col > 0 and not grid[self.row][self.col - 1].is_barrier(): #check the neighbour immediately left
-            self.neighbours.append(grid[self.row - 1][self.col])
+            self.neighbours.append(grid[self.row][self.col - 1])
 
         if self.col < self.total_rows - 1 and not grid[self.row][self.col + 1].is_barrier(): #check the neighbour immediately right
             self.neighbours.append(grid[self.row][self.col + 1])
